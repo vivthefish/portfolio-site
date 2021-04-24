@@ -1,0 +1,796 @@
+/* Basic Site Layout CSS for Vivian's Portfolio Site - By Vivian Harvey */
+// --------- INCLUSIONS
+// @import url("https://fonts.googleapis.com/css?family=EB+Garamond:700|Roboto");
+
+@import "variables";
+@import "base";
+@import "header";
+@import "footer";
+@import "textSlider";
+@import "cssAnims";
+
+
+// ----- BG Lines -----
+main {
+  position: relative;
+  #line-center, #lines-lr {
+    display: none;
+  }
+  @media(min-width: 800px) {
+    #line-center, #lines-lr {
+      display: block;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      // z-index: -20;
+    }
+    #line-center {
+      left: 0;
+      width: 50%;
+      border-right: 1px solid $bgLines;
+    }
+    #lines-lr {
+      left: 25%;
+      border-left: 1px solid $bgLines;
+      border-right: 1px solid $bgLines;
+      width: 50%;
+    }
+  }
+}
+
+
+
+
+
+// ----- INDEX PAGE -----
+#index-page {
+  #index-banner {
+    padding: 5rem 0;
+    font-family: $titleFont;
+    font-size: 3rem;
+    position: relative;
+    min-height: 100vh;
+    .molecule-container {
+      position: absolute;
+      left: -2rem;
+      top: -2rem;
+      width:300px;
+      @media(min-width: 2000px) {
+        left: -5rem;
+        top: -1rem;
+        width:500px;
+      }
+      #molecule {
+        width: 100%;
+      }
+    }
+    .topo-block {
+      position: absolute;
+      height: 100%;
+      width: 37.5%;
+      right: 0;
+      top: 0;
+      border-left: 1px solid $bgLines;
+      border-bottom: 1px solid $bgLines;
+      background: url('../images/topography.svg');
+    }
+    #deerBox {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      height: 50%;
+      width: 40%;
+      transform: translateX(-50.1%);
+      background: url('../images/deer.svg');
+      background-size: cover;
+      background-position: center top;
+      opacity: .4;
+    }
+    #flowerBox {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      height: 30%;
+      width: 30%;
+      transform: translateX(-50.1%);
+      background: url('../images/flower.svg');
+      background-size: cover;
+      background-position: center top;
+      opacity: .4;
+    }
+    .flex-large {
+      position: relative;
+      .text {
+        padding-top: 2rem;
+      }
+    }
+    .flex-large:first-child {
+      text-align: center;
+      z-index: 10;
+    }
+    .lead {
+      position: relative;
+    }
+    h1 {
+      margin: 0;
+      font-size: 4rem;
+      position: relative;
+      z-index: 9999;
+    } 
+    .subtitle {
+      margin-top: .5rem;
+      font-style: italic;
+      margin-bottom: 0;
+      // font-family: $mainFont;
+      line-height: 100%;
+      color: $turq;
+      span {
+        color: $navy;
+      }
+    }
+    .secondary-h1 {
+      &::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .img-block {
+      display: none;
+    }
+    #flower-block {
+      width: 50%;
+      position: absolute;
+      right: 7%;
+      top: 7%;
+    }
+    #cali-img {
+      position: relative;
+      z-index: 1;
+      .gatsby-image-wrapper {
+        max-width: 350px;
+        margin: 0 auto;
+        @media(min-width: 1000px) {
+            margin: 0;
+            margin-top: 11rem;
+          }
+        }
+    }
+    @media(min-width: 1000px) {
+      .flex-large:first-child {
+        text-align: left;
+        z-index: 2;
+        left: 70px;
+      }
+      .flex-large {
+        max-width: 50% !important;
+      }
+      h1 {
+        font-size: 7rem; 
+        width: 75vw;
+        line-height: 6.5rem;
+      }
+      .lead {
+        left: -3rem;
+      }
+      .subtitle {
+        margin-left: 1rem;
+      }
+      .secondary-h1 {
+        width: 75vw;
+        margin-left: 1rem;
+        margin-bottom: 1.7rem;
+        &::after {
+          left: 0;
+          transform: none;
+        }
+      }
+      .cta-btn {
+        margin-left: 1rem;
+      }
+      .img-block {
+        display: block;
+        width: 30%;
+        position: absolute;
+        left: 0;
+        top: 70%;
+        // opacity: .6;
+      }
+    }
+    @media(min-width: 2000px) {
+      .secondary-h1 {
+        font-size: 4rem;
+      }
+      h1 {
+        font-size: 9rem;
+      }
+      #cali-img {
+        .gatsby-image-wrapper {
+          max-width: 550px;
+        }
+      }
+      #flower-block {
+        display: block;
+        width: 60%;
+        right: -25%;
+        top: 2%;
+      }
+    }
+  }
+}
+#recent {
+  background: url('../images/topography.svg');
+  border-bottom: 1px solid $bgLines;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  .index-header {
+    background-color: white;
+    border-top: 1px solid $bgLines;
+    border-bottom: 1px solid $bgLines;
+    position: relative;
+    z-index: 2;
+    @media(min-width: 1000px) {
+      width: 70%;
+      margin-left: 30%;
+    }
+  }
+  .container {
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+  }
+  .flex-row {
+    justify-content: center;
+  }
+  .flex-large {
+    padding: 1rem 1rem 0 1rem;
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+
+    &:first-child {
+      .block {
+        background-image: url('../images/portfolio-web/sportsmeet.jpg');
+      }
+    }
+    &:nth-child(2) {
+      .block {
+        background-image: url('../images/portfolio-web/caf-screen2.jpg');
+      }
+    }
+    &:nth-child(3) {
+      .block {
+        background-image: url('../images/portfolio-web/wasabi.jpg');
+      }
+    }
+    .react-reveal {
+      height: 100%;
+    }
+    .block {
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      height: 100%;
+      width: 100%;
+      background-color: white;
+      border: 1.5px solid $bgLines;
+      text-align: center;
+      &:hover, &:focus {
+        text-decoration: none;
+        .inner {
+          opacity: 1;
+        }
+      }
+      .inner {
+        padding: 4rem 2rem;
+        background-color: $coral;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity .3s;
+        h3 {
+          font-size: 3rem;
+          font-weight: 800;
+          line-height: 3rem;
+          background-color: transparent;
+          color: white;
+          margin-top: 0;
+          margin-bottom: .75rem;
+        }
+        span {
+          color: $navy;
+          text-transform: uppercase;
+          font-weight: 600;
+          letter-spacing: 1.5px;
+        }
+      }
+    }
+    @media(min-width: 1000px) {
+      padding: 3rem 1rem;
+    }
+  }
+  img {
+    width: 100%;
+    max-width: 175px;
+  }
+  // @media(min-width: 2000px) {
+  //   .index-header {
+  //     padding-top: 1rem;
+  //   }
+  // }
+}
+#what-do {
+  border-bottom: 1px solid $bgLines;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .topo-block {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    right: 0;
+    top: 0;
+    // border-left: 1px solid $bgLines;
+    // border-bottom: 1px solid $bgLines;
+    // background: url('../images/topography.svg');
+    background: url('../images/birds-flying.jpg');
+    opacity: .5;
+  }
+  // #deerBox {
+  //   position: absolute;
+  //   left: 0;
+  //   bottom: 0;
+  //   height: 50%;
+  //   width: 40%;
+  //   transform: translateX(-50.1%);
+  //   background: url('../images/deer.svg');
+  //   background-size: cover;
+  //   background-position: center top;
+  //   opacity: .4;
+  // }
+  .index-header {
+    background-color: white;
+    border-top: 1px solid $bgLines;
+    border-bottom: 1px solid $bgLines;
+    position: relative;
+    z-index: 2;
+    // @media(min-width: 1000px) {
+    //   width: 70%;
+    //   margin-left: 30%;
+    // }
+  }
+  .container {
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .flex-row {
+    justify-content: center;
+  }
+  .flex-large {
+    padding: 1rem 1rem 0 1rem;
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+    .block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      height: 100%;
+      width: 100%;
+      background-color: white;
+      border: 1.5px solid $bgLines;
+      text-align: center;
+      h3 {
+        font-size: 1.5rem;
+        font-family: $mainFont;
+        background-color: transparent;
+        color: $ltNavy;
+        margin-top: 0;
+        margin-bottom: .5rem;
+      }
+      p {
+      }
+    }
+    @media(min-width: 1000px) {
+      padding: 3rem 1rem;
+    }
+  }
+  img {
+    width: 100%;
+    max-width: 175px;
+  }
+  // @media(min-width: 2000px) {
+  //   .index-header {
+  //     padding-top: 8rem;
+  //   }
+  // }
+}
+#contact {
+  min-height: 100vh;
+  padding: 2rem 0;
+  position: relative;
+  overflow: hidden;
+  // background-size: 40%;
+  text-align: center;
+  .wrapper {
+    width: 100%;
+  }
+  .container {
+    background: url('../images/blue-leaves-lt-02.svg');
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-position-y: -50px;
+    background-position-x: -20px;
+    background-size: 35%;
+    background-color: white;
+    border: 1.5px solid $bgLines;
+    padding: 2rem 1rem;
+    position: relative;
+    z-index: 2;
+    margin: 0 1rem;
+    @media(min-width: 1000px) {
+      margin: 0 auto;
+    }
+  }
+  form {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  label {
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-align: left;
+  }
+  input, textarea {
+    border: none;
+    background-color: $bgLines;
+    border-bottom: 3px solid $turq;
+  }
+  input {
+    max-width: 600px;
+  }
+  .cta-btn {
+    margin-top: 1rem;
+    padding: .75rem 2.5rem;
+  }
+  #wood-block {
+    position: absolute;
+    background: url('../images/natural-paper.png'), linear-gradient(to right, $bgLines 30%, $turq);
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 35%;
+    opacity: .8;
+  }
+  @media(min-width: 2000px) {
+    min-height: 75vh;
+  }
+}
+
+// Weird Firefox fix
+@-moz-document url-prefix() {
+  textarea {
+    box-shadow: none;
+  }
+}
+
+
+// ----- ABOUT ME PAGE -----
+#about-page {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  .container {
+    @media(min-width: 2000px) {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .flex-small {
+    position: relative;
+    z-index: 3;
+  }
+  .flex-small:first-child {
+    .gatsby-image-wrapper {
+      max-width: 200px;
+      margin: 0 auto;
+    }
+  }
+  #technologies {
+    position: relative;
+    z-index: 3;
+    .heading {
+      position: relative;
+      z-index: 4;
+      background-color: white;
+      border-top: 1px solid $bgLines;
+      border-bottom: 1px solid $bgLines;
+    }
+    #wood-block {
+      display: none;
+      bottom: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background: url('../images/topography.svg');
+      @media(min-width: 1000px) {
+        display: block;
+      }
+    }
+  }
+  .techs-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    z-index: 4;
+    .tech-item {
+      flex-basis: 50%;
+      text-align: center;
+      padding: 1rem 0;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        background-color: $bgLines;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        transition: transform 250ms;
+      }
+      p {
+        position: relative;
+        top: 15px;
+      }
+      .gatsby-image-wrapper {
+        // margin: 50px auto 0 auto;
+        margin: 0 auto;
+        width: 100px;
+        position: relative;
+        top: 25px;
+      }
+      @media(min-width: 576px) {
+        flex-basis: 33%;
+      }
+      @media(min-width: 768px) {
+        flex-basis: 25%;
+      }
+      @media(min-width: 1000px) {
+        flex-basis: 17%;
+      }
+      @media(min-width: 1200px) {
+        flex-basis: 14%;
+      }
+    }
+  }
+  .img-block {
+    position: absolute;
+  }
+  #raptor-block {
+    top: 6rem;
+    left: 4rem;
+    height: 100%;
+    width: 100%;
+    background: url('../images/raptor.svg');
+    background-size: 600px;
+    background-repeat: no-repeat;
+    opacity: .8;
+  }
+  @media(min-width: 600px) {
+    .flex-small:first-child {
+      flex-basis: 25%;
+    }
+    .flex-small:last-child {
+      flex-basis: 75%;
+    }
+  }
+}
+
+// ----- PORTFOLIO - WEB PAGE -----
+#portfolio-web-page {
+  position: relative;
+  z-index: 2;
+}
+.featured {
+  background-color: white;
+  border: 1px solid $bgLines;
+  h2 {
+    margin-bottom: 0;
+    color: $ltNavy;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+}
+.port-img-col {
+  img {
+    width: 100%;
+  }
+  .gatsby-image-wrapper {
+    max-height: 200px;
+  }
+  border-bottom: 1px solid $bgLines;
+}
+.port-info-col {
+  position: relative;
+  h3 {
+    font-size: 3rem;
+    color: $turq;
+    margin-bottom: .5rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+    color: $ltTurq;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+@media(min-width: 600px) {
+  .port-img-col {
+    flex-basis: 33%;
+    border-right: 1px solid $bgLines;
+    border-bottom: none;
+    padding-right: 0;
+    .gatsby-image-wrapper {
+      max-height: none;
+      height: 100%;
+    }
+  }
+  .port-info-col {
+    flex-basis: 67%;
+  }
+}
+.contribution {
+  background-color: $ltNavy;
+  color: white;
+  padding: 2rem 3rem;
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    li {
+      padding-bottom: .5rem;
+    }
+  }
+  @media(min-width: 1000px) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.port-item {
+  background-color: white;
+  border: 1.5px solid $bgLines;
+  .port-info-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  ul {
+    list-style: none;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    padding: 0;
+    li {
+      display: inline-block;
+      margin-left: 2rem;
+      &::before {
+        content: '\2022';
+        color: $midTurq;
+        font-weight: 800;
+        display: inline-block;
+        width: 1rem;
+        margin-left: -1rem;
+      }
+    }
+  }
+}
+
+// ----- SportsMeet Page -----
+#sportsmeet-page {
+  position: relative;
+  z-index: 2;
+  .topo-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15rem;
+    width: 100%;
+    border-bottom: 1px solid $bgLines;
+    background: url('../images/topography.svg');
+  }
+  .container {
+    padding-top: 16rem !important;
+  }
+  ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    padding: 0;
+    li {
+      display: inline-block;
+      margin-left: 2rem;
+      font-weight: 600;
+      &::before {
+        content: '\2022';
+        color: $midTurq;
+        font-weight: 800;
+        display: inline-block;
+        width: 1rem;
+        margin-left: -1rem;
+      }
+    }
+  }
+  em {
+    font-weight: 600;
+    color: $ltNavy;
+  }
+  .text-content {
+    max-width:800px;
+  }
+}
+
+// ----- PORTFOLIO - GRAPHIC DESIGN PAGE -----
+#portfolio-gd-page {
+  position: relative;
+  z-index: 2;
+  #trans-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+    z-index: 1000;
+  }
+  #photos {
+    position:relative;
+    /* Prevent vertical gaps */
+    line-height: 0;
+    
+    -webkit-column-count: 1;
+    -webkit-column-gap:   5px;
+    -moz-column-count:    1;
+    -moz-column-gap:      5px;
+    column-count:         1;
+    column-gap:           5px; 
+    .port-item {
+      border: none;
+    }
+    .gatsby-image-wrapper {
+      -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
+      break-inside: avoid;
+      width: 100%;
+      height: auto;
+      margin: 5px 0;
+    }
+    @media(min-width: 600px) {
+      -moz-column-count:    2;
+      -webkit-column-count: 2;
+      column-count:         2;
+    }
+    @media(min-width: 1000px) {
+      -moz-column-count:    3;
+      -webkit-column-count: 3;
+      column-count:         3;
+    }
+  }
+}

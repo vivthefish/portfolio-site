@@ -1,0 +1,33 @@
+#index-banner {
+    .secondary-h1 {
+    }
+    @media(min-width: 1000px) {
+        .secondary-h1 {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+#slider {
+    display: inline-block;
+    overflow: hidden;
+    height: 64px;
+    padding-left: .6rem;
+    // display: none;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            // height: 64px;
+            line-height: 64px;
+        }
+    }
+    @media(min-width: 2000px) {
+        padding-left: 1rem;
+        height: 83.33px;
+        li {
+            line-height: 83.33px !important;
+        }
+    }
+}

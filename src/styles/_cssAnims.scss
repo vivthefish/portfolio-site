@@ -1,0 +1,43 @@
+#wolf-skull-anim {
+    path[fill=none][stroke-width='3'] {
+        stroke-dasharray: 400 100;
+        animation: dash 20s linear infinite;
+    }
+    path[fill=none][stroke-width='2'] {
+        stroke-dasharray: 300 100;
+        animation: dash 20s linear infinite;
+    }
+    path[fill=none]:not([stroke-width]) {
+        stroke-dasharray: 200 50;
+        animation: dashSm 20s linear infinite;
+    }
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 1000;
+    }
+}
+@keyframes dashSm {
+    to {
+        stroke-dashoffset: 500;
+    }
+}
+
+#molecule {
+    #outside {
+        transform-origin: center;
+        animation: rotateRight 60s linear infinite;
+    }
+    #inside {
+        transform-origin: center;
+        animation: rotateLeft 90s linear infinite;
+    }
+}
+
+@keyframes rotateRight {
+    to { transform: rotate(360deg) }
+}
+@keyframes rotateLeft {
+    to { transform: rotate(-360deg) }
+}

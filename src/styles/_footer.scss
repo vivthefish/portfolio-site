@@ -1,0 +1,114 @@
+// ----- FOOTER -----
+body {
+    // background: url('../images/wolf-skull.svg');
+    // background-repeat: no-repeat;
+    // background-position: center bottom;
+    // background-attachment: fixed;
+    // background-size: 75%;
+    // @media(min-width: 600px) {
+    //   background-position-x: 57%;
+    //   background-size: 50%;
+    // }
+    // @media(min-width: 1000px) {
+    //     background-size: 35%;
+    // }
+    // @media(min-width: 1500px) {
+    //     background-position-x: 51%;
+    // }
+    #wolf-skull-anim {
+      position: fixed;
+      z-index: -1;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      // max-width: 100%;
+      height: 600px;
+      @media(min-width: 600px) {
+        transform: translateX(-39%);
+      }
+      @media(min-width: 1000px) {
+        height: auto;
+        transform: translateX(-39%);
+      }
+      @media(min-width: 2000px) {
+        width: 900px;
+        transform: translateX(-39%);
+      }
+    }
+}
+  footer {
+    min-height: 400px;
+    border-top: 1px solid $bgLines;
+    // background-color: pink;
+    padding: 1rem;
+    .flex-large {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        p {
+            text-align: center;
+        }
+      &:last-child {
+        justify-content: center;
+      }
+    }
+    @media(min-width: 1000px) {
+        min-height: 80vh;
+        .flex-large {
+            text-align: left;
+            p {
+                text-align: right;
+            }
+        }
+    }
+    p {
+      margin: 0;
+      font-size: 1rem;
+      svg {
+        color: $coral;
+      }
+    }
+    @media(min-width: 600px) {
+      margin-left: $navMargLeft;
+      }
+    ul {
+      display: inline-block;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        margin-right: 1rem;
+        height: 40px;
+        width: 40px;
+        margin-top: 0.5rem;
+      }
+    }
+    #top-btn {
+      display: inline-block;
+    }
+    .social-link {
+      color: $navy;
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      width: 100%;
+      &::after {
+       content: '';
+       position: absolute;
+       height: 3.5rem;
+       width: 3.5rem;
+       background-color: $ltTurq;
+       border-radius: 50%;
+       top: 20%;
+       left: 50%;
+       transform: translate(-50%, -50%) scale(0);
+       z-index: -1;
+       opacity: .5;
+       transition: transform 250ms;
+     }
+     &:hover::after {
+       transform: translate(-50%, -50%) scale(1);
+     }
+    }
+  }
