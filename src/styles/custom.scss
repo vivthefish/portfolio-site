@@ -618,14 +618,40 @@ main {
     font-size: 1.2rem;
   }
 }
+#sportsmeet.port-item {
+    .img-fill {
+        background-image: url('../images/portfolio-web/sportsmeet.jpg');
+    }
+}
+#wasabi.port-item {
+    .img-fill {
+        background-image: url('../images/portfolio-web/wasabi.jpg');
+    }
+}
+#ordinary.port-item {
+    .img-fill {
+        background-image: url('../images/portfolio-web/ordinary.jpg');
+    }
+}
+#lightness.port-item {
+    .img-fill {
+        background-image: url('../images/portfolio-web/light.jpg');
+    }
+}
+#chuck.port-item {
+    .img-fill {
+        background-image: url('../images/portfolio-web/chuck.jpg');
+    }
+}
 .port-img-col {
-  img {
-    width: 100%;
+    border-bottom: 1px solid $bgLines;
+    min-height:250px;
+    .img-fill {
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        width: 100%;
   }
-  .gatsby-image-wrapper {
-    max-height: 200px;
-  }
-  border-bottom: 1px solid $bgLines;
 }
 .port-info-col {
   position: relative;
