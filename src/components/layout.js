@@ -12,7 +12,9 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from './footer'
 import WolfSkull from '../components/wolfSkull'
-import "./../styles/custom.scss"
+// import "./../styles/primitive.css"
+// import "./../styles/bootstrap-hack.css"
+// import "./../styles/custom.scss"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

@@ -29,7 +29,7 @@ body {
   h4,
   h5,
   h6 {
-    font-family: $titleFont;
+    font-family: $titleFont !important;
     font-size: 4rem;
     color: $navy;
   }
@@ -83,7 +83,7 @@ body {
   a {
     color: #00b7ff;
   }
-  .cta-btn {
+  .cta-btn, .cta-btn.cta-btn {
     background-color: transparent;
     border: 3px solid $coral;
     border-radius: 3px;
