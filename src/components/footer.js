@@ -5,6 +5,7 @@ import { faGithub, faLinkedinIn, faInstagram, } from "@fortawesome/free-brands-s
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const Footer = ({ siteTitle }) => (
   <footer className="main">
@@ -27,7 +28,7 @@ const Footer = ({ siteTitle }) => (
             </li> */}
           </ul>
           <div id="top-btn" className="text-content ml-3">
-            <a href="#top" className=""><FontAwesomeIcon icon={faArrowUp} size="md" /> Back to Top</a>
+            <button onClick={() => scrollTo('#top')} className=""><FontAwesomeIcon icon={faArrowUp} size="md" /> Back to Top</button>
           </div>
         </div>
         <div className="flex-large text-content">

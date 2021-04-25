@@ -1,5 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { TransitionPortal } from "gatsby-plugin-transition-link"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
@@ -78,33 +80,33 @@ const IndexPage = () => (
                 <div className="flex-row">
                   <div className="flex-large">
                     <Fade bottom cascade distance={'20px'} delay={300}>
-                        <Link className="block" to="/sportsmeet/">
+                        <AniLink cover bg="white" direction="right" className="block" to="/sportsmeet/">
                           <div className="inner">
                             <h3>SportsMeet App Design</h3>
                             <span>View Project</span>
                           </div>
-                        </Link>
+                        </AniLink>
                     </Fade>
                   </div>
                   <div className="flex-large">
                     <Fade bottom cascade distance={'20px'} delay={700}>
-                      <Link className="block" to="/portfolio-web/#featured-project">
+                      <AniLink cover bg="white" direction="up" className="block" to="/portfolio-web/#featured-project">
                         <div className="inner">
                           <h3>Forces Recruiting Website</h3>
                           <span>View Project</span>
                         </div>
-                      </Link>
+                      </AniLink>
                     </Fade>
 
                   </div>
                   <div className="flex-large">
                     <Fade bottom cascade distance={'20px'} delay={1100}>
-                        <Link className="block" to="/portfolio-web/#1">
+                        <AniLink cover bg="white" direction="up" className="block" to="/portfolio-web/#wasabi">
                           <div className="inner">
                             <h3>Wasabi Match</h3>
                             <span>View Project</span>
                           </div>
-                        </Link>
+                        </AniLink>
                     </Fade>
                   </div>
                 </div>
