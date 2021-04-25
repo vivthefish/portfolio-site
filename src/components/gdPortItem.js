@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
+// import { StaticImage } from "gatsby-plugin-image"
 
 class GDPortItem extends React.Component {
 
@@ -8,7 +8,7 @@ class GDPortItem extends React.Component {
         const { project } = this.props;
         return (
             <div className="port-item">
-                <StaticImage src={ project.img } alt={project.title} />
+                {/* <StaticImage src={ project.img } alt={project.title} /> */}
             </div>
         )
     }
