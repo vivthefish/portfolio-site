@@ -36,7 +36,7 @@ const SportsMeet = () => (
     
                     <StaticImage src="../images/sportsmeet/logos-v1p2.jpg" alt="Set of 12 sportsmeet logo concepts" />
                     
-                    <p>Option #7 was chosen to develop further and this was the next set of concepts I presented. Here I also chose the Ubuntu font to pair with the logo since it has a modern and minimal feel while also being a free web-safe Google font.</p>
+                    <p>Option #7 was chosen to develop further and this was the next set of concepts I presented. I also chose the Ubuntu font to pair with the logo since it has a modern and minimal feel while also being a free web-safe Google font.</p>
     
                     <StaticImage src="../images/sportsmeet/logos-v2.jpg" alt="Set of 3 sportsmeet logos with logotype" />
                     
